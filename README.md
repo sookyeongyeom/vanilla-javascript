@@ -55,7 +55,7 @@
 -   [x] Object Destructuring
 -   [x] Array Destructuring
 -   [x] XMLHttpRequest
--   [ ] Fetch API
+-   [X] Fetch API
 -   [ ] Promise & Async/Await
 -   [ ] Modules
 -   [ ] Class
