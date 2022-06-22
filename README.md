@@ -44,16 +44,16 @@
 
 ## Chapter 05 자바스크립트 고급 문법
 
-- [ ] this 키워드
-- [ ] Scope
-- [ ] Default Function Parameter
-- [ ] Rest Parameter
-- [ ] Arrow Function
-- [ ] Template Literals
-- [ ] Object Literal Syntax Extension
-- [ ] Spread Operator
-- [ ] Object Destructuring
-- [ ] Array Destructuring
+- [x] this 키워드
+- [x] Scope
+- [x] Default Function Parameter
+- [x] Rest Parameter
+- [x] Arrow Function
+- [x] Template Literals
+- [x] Object Literal Syntax Extension
+- [x] Spread Operator
+- [x] Object Destructuring
+- [x] Array Destructuring
 - [ ] XMLHttpRequest
 - [ ] Fetch API
 - [ ] Promise & Async/Await
