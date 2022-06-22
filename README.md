@@ -55,11 +55,11 @@
 -   [x] Object Destructuring
 -   [x] Array Destructuring
 -   [x] XMLHttpRequest
--   [X] Fetch API
--   [ ] Promise & Async/Await
--   [ ] Modules
--   [ ] Class
--   [ ] Error
+-   [x] Fetch API
+-   [x] Promise & Async/Await
+-   [x] Modules
+-   [x] Class
+-   [x] Error
 -   [ ] Strict Mode(엄격 모드)
 -   [ ] 정규 표현식(Regular Expression)
 
