@@ -60,8 +60,8 @@
 -   [x] Modules
 -   [x] Class
 -   [x] Error
--   [ ] Strict Mode(엄격 모드)
--   [ ] 정규 표현식(Regular Expression)
+-   [x] Strict Mode(엄격 모드)
+-   [x] 정규 표현식(Regular Expression)
 
 ## Chapter 06 REST API
 
