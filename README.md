@@ -28,17 +28,17 @@
 
 ## Chapter 04 자바스크립트 내장 객체
 
-- [ ] Object 객체
-- [ ] String 객체
-- [ ] Number 객체
-- [ ] Array 객체
-- [ ] Date 객체
-- [ ] Set 객체
-- [ ] Map 객체
-- [ ] Math 객체
-- [ ] JSON 객체
-- [ ] Window 객체
-- [ ] Symbol
+- [x] Object 객체
+- [x] String 객체
+- [x] Number 객체
+- [x] Array 객체
+- [x] Date 객체
+- [x] Set 객체
+- [x] Map 객체
+- [x] Math 객체
+- [x] JSON 객체
+- [x] Window 객체
+- [x] Symbol
 
 ## Chapter 05 자바스크립트 고급 문법
 
