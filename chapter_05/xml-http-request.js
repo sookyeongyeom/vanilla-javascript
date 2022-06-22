@@ -9,8 +9,8 @@ xhr.setRequestHeader("content-type", "application/json");
 
 // POST 데이터
 const xhr2 = new XMLHttpRequest();
-xhr.open("POST", "https://jsonplaceholder.typicode.com/posts");
-xhr.setRequestHeader("content-type", "application/json");
+xhr2.open("POST", "https://jsonplaceholder.typicode.com/posts");
+xhr2.setRequestHeader("content-type", "application/json");
 
 const data = {
     id: 1,
@@ -18,69 +18,69 @@ const data = {
     author: "Soo",
 };
 
-xhr.send(JSON.stringify(data)); // 오브젝트 데이터를 문자열 형태로 변경하여 전송해야함 (request의 body에 담겨 전송됨)
+xhr2.send(JSON.stringify(data)); // 오브젝트 데이터를 문자열 형태로 변경하여 전송해야함 (request의 body에 담겨 전송됨)
 
 // Response 처리
 const xhr3 = new XMLHttpRequest();
-xhr.open("GET", "https://jsonplaceholder.typicode.com/posts");
-xhr.setRequestHeader("content-type", "application/json");
-xhr.send();
+xhr3.open("GET", "https://jsonplaceholder.typicode.com/posts");
+xhr3.setRequestHeader("content-type", "application/json");
+xhr3.send();
 
-xhr.onload = () => {
-    if (xhr.status === 200) {
-        const res = JSON.parse(xhr.response); // 응답 데이터를 JSON 객체로 변경
+xhr3.onload = () => {
+    if (xhr3.status === 200) {
+        const res = JSON.parse(xhr3.response); // 응답 데이터를 JSON 객체로 변경
         console.log(res);
     } else {
         // 에러 발생
-        console.error(xhr.status, xhr.statusText); // 응답 상태와 응답 메시지를 출력
+        console.error(xhr3.status, xhr3.statusText); // 응답 상태와 응답 메시지를 출력
     }
 };
 
 // 데이터 생성
 const xhr4 = new XMLHttpRequest();
-xhr.open("POST", "https://jsonplaceholder.typicode.com/posts");
-xhr.setRequestHeader("content-type", "application/json;charset=UTF-8");
-xhr.send(JSON.stringify({ title: "foo", body: "bar", userId: 1 }));
+xhr4.open("POST", "https://jsonplaceholder.typicode.com/posts");
+xhr4.setRequestHeader("content-type", "application/json;charset=UTF-8");
+xhr4.send(JSON.stringify({ title: "foo", body: "bar", userId: 1 }));
 
-xhr.onload = () => {
-    if (xhr.status === 201) {
+xhr4.onload = () => {
+    if (xhr4.status === 201) {
         // IsCreated
-        const res = JSON.parse(xhr.response); // 응답 데이터를 JSON 객체로 변경
+        const res = JSON.parse(xhr4.response); // 응답 데이터를 JSON 객체로 변경
         console.log(res);
     } else {
         // 에러 발생
-        console.error(xhr.status, xhr.statusText); // 응답 상태와 응답 메시지를 출력
+        console.error(xhr4.status, xhr4.statusText); // 응답 상태와 응답 메시지를 출력
     }
 };
 
 // 데이터 수정
 const xhr5 = new XMLHttpRequest();
-xhr.open("PUT", "https://jsonplaceholder.typicode.com/posts/1");
-xhr.setRequestHeader("content-type", "application/json;charset=UTF-8");
-xhr.send(JSON.stringify({ title: "foo", body: "bar", userId: 1 }));
+xhr5.open("PUT", "https://jsonplaceholder.typicode.com/posts/1");
+xhr5.setRequestHeader("content-type", "application/json;charset=UTF-8");
+xhr5.send(JSON.stringify({ title: "foo", body: "bar", userId: 1 }));
 
-xhr.onload = () => {
-    if (xhr.status === 200) {
-        const res = JSON.parse(xhr.response); // 응답 데이터를 JSON 객체로 변경
+xhr5.onload = () => {
+    if (xhr5.status === 200) {
+        const res = JSON.parse(xhr5.response); // 응답 데이터를 JSON 객체로 변경
         console.log(res);
     } else {
         // 에러 발생
-        console.error(xhr.status, xhr.statusText); // 응답 상태와 응답 메시지를 출력
+        console.error(xhr5.status, xhr5.statusText); // 응답 상태와 응답 메시지를 출력
     }
 };
 
 // 데이터 삭제
 const xhr6 = new XMLHttpRequest();
-xhr.open("DELETE", "https://jsonplaceholder.typicode.com/posts/1");
-xhr.setRequestHeader("content-type", "application/json;charset=UTF-8");
-xhr.send();
+xhr6.open("DELETE", "https://jsonplaceholder.typicode.com/posts/1");
+xhr6.setRequestHeader("content-type", "application/json;charset=UTF-8");
+xhr6.send();
 
-xhr.onload = () => {
-    if (xhr.status === 200) {
-        const res = JSON.parse(xhr.response); // 응답 데이터를 JSON 객체로 변경
+xhr6.onload = () => {
+    if (xhr6.status === 200) {
+        const res = JSON.parse(xhr6.response); // 응답 데이터를 JSON 객체로 변경
         console.log(res);
     } else {
         // 에러 발생
-        console.error(xhr.status, xhr.statusText); // 응답 상태와 응답 메시지를 출력
+        console.error(xhr6.status, xhr6.statusText); // 응답 상태와 응답 메시지를 출력
     }
 };
