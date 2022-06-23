@@ -77,11 +77,11 @@ Chapter 06 - Chapter 14 ▶ 22.06.23 금
 
 ## Chapter 08 자바스크립트 HTML DOM
 
--   [ ] DOM Element(요소)
--   [ ] DOM Attribute
--   [ ] HTML 내용 변경
--   [ ] DOM 이벤트
--   [ ] DOM Style(스타일)
+-   [x] DOM Element(요소)
+-   [x] DOM Attribute
+-   [x] HTML 내용 변경
+-   [x] DOM 이벤트
+-   [x] DOM Style(스타일)
 
 ## Chapter 09 자바스크립트의 메모리 관리
 
