@@ -65,14 +65,14 @@
 
 ## Chapter 06 REST API
 
--   [ ] REST API
--   [ ] JSON 서버 사용하기
+-   [x] REST API
+-   [x] JSON 서버 사용하기
 
 ## Chapter 07 Mock 서버 준비하기
 
--   [ ] Postman 설치
--   [ ] Mock 서버 생성
--   [ ] API 반환 데이터 설정
+-   [x] Postman 설치
+-   [x] Mock 서버 생성
+-   [x] API 반환 데이터 설정
 
 ## Chapter 08 자바스크립트 HTML DOM
 
