@@ -1,0 +1,26 @@
+<!-- 정수형 숫자만 입력 가능한 input 필드
+사용자가 키보드 자판을 누를 때마다 각 키보드 자판별로 고유한 키 값 발생 -->
+
+<input type="text" onkeydown="checkInt(event)" onkeyup="checkKr(event)" />
+
+<script>
+    // 숫자, 백스페이스, delete, 왼쪽, 오른쪽 방향키가 아니면 입력을 받지 않음
+    function checkInt(e) {
+        if (
+            !(
+                (e.keyCode >= 48 && e.keyCode <= 57) ||
+                e.keyCode == 8 ||
+                e.keyCode == 46 ||
+                e.keyCode == 37 ||
+                e.keyCode == 39
+            )
+        ) {
+            e.preventDefault(); // keyup이 진행되기 전 이벤트를 중단시켜 값이 입력되지 않도록 함
+        }
+    }
+
+    // 한글이 입력되면 삭제
+    function checkKr(e) {
+        e.target.value = e.target.value.replace(/[^0-9]/gi, "");
+    }
+</script>
