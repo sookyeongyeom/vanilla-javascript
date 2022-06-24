@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+        <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+        <link rel="shortcut icon" href="#" />
+    </head>
+    <body>
+        <button id="login-btn" onclick="kakaoLogin()">카카오 로그인</button>
+        <button id="logout-btn" onclick="kakaoLogout()" style="display: none">
+            카카오 로그아웃
+        </button>
+        <script>
+            Kakao.init("d58b85f6d6aa34df2f6f2a7b4d6e4536");
+
+            function kakaoLogin() {
+                Kakao.Auth.login({
+                    scope: "profile_nickname, account_email",
+                    success: function () {
+                        // 로그인 성공
+                        Kakao.API.request({
+                            // 사용자 정보 가져오기
+                            url: "/v2/user/me",
+                            success: (res) => {
+                                // 사용자 정보 가져오기 성공
+                                const kakaoAccount = res.kakao_account;
+                                console.log(kakaoAccount);
+                                document.getElementById(
+                                    "login-btn"
+                                ).style.display = "none";
+                                document.getElementById(
+                                    "logout-btn"
+                                ).style.display = "";
+                            },
+                        });
+                    },
+                    fail: function (error) {
+                        // 로그인 실패
+                        console.log(error);
+                    },
+                });
+            }
+
+            function kakaoLogout() {
+                if (!Kakao.Auth.getAccessToken()) {
+                    console.log("Not logged in.");
+                    return;
+                }
+                Kakao.Auth.logout((res) => {
+                    console.log(window.Kakao.Auth.getAccessToken());
+                    console.log(res);
+                    document.getElementById("login-btn").style.display = "";
+                    document.getElementById("logout-btn").style.display =
+                        "none";
+                });
+            }
+        </script>
+    </body>
+</html>
