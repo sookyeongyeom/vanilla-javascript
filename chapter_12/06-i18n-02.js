@@ -1,3 +1,5 @@
+// 다국어를 적용할 문자열의 특정 부분을 데이터베이스에서 가져온 값으로 변경
+
 const i18n = {
     en: {
         "My name is {fullName}. I am from {city}.":
