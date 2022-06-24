@@ -85,25 +85,25 @@ Chapter 06 - Chapter 14 ▶ 22.06.23 금
 
 ## Chapter 09 자바스크립트의 메모리 관리
 
--   [ ] 메모리 할당
--   [ ] 메모리 해제
+-   [x] 메모리 할당
+-   [x] 메모리 해제
 
 ## Chapter 10 자바스크립트 주요 Web APIs
 
--   [ ] LocalStorage, SessionStorage
--   [ ] Geolocation API
--   [ ] Web Speech API
--   [ ] encodeURI/decodeURI
+-   [x] LocalStorage, SessionStorage
+-   [x] Geolocation API
+-   [x] Web Speech API
+-   [x] encodeURI/decodeURI
 
 ## Chapter 11 브라우저의 렌더링 과정
 
--   [ ] 렌더링 과정
--   [ ] 리플로우(Reflow), 리페인트(Repaint)
+-   [x] 렌더링 과정
+-   [x] 리플로우(Reflow), 리페인트(Repaint)
 
 ## Chapter 12 자바스크립트 라이브러리 직접 구현해보기
 
--   [ ] Datepicker
--   [ ] 날짜 포맷터
+-   [x] Datepicker
+-   [x] 날짜 포맷터
 -   [ ] 금액 포맷터
 -   [ ] 정수형 숫자만 입력 가능한 input 필드 만들기
 -   [ ] 소수점을 포함한 숫자만 입력 가능한 input 필드 만들기
