@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+    </head>
+    <body>
+        <input type="text" id="txt" />
+        <button onclick="filter();">검색</button>
+        <table>
+            <thead>
+                <tr>
+                    <th data-sort-key="name">Name</th>
+                    <th data-sort-key="company">Company</th>
+                    <th data-sort-key="email">Email</th>
+                    <th data-sort-key="phone">Phone</th>
+                    <th data-sort-key="address">Address</th>
+                </tr>
+            </thead>
+            <tbody id="user_tb"></tbody>
+        </table>
+        <script type="module">
+            import { userList } from "./07-data.js";
+
+            // 렌더링
+            function render(id, data) {
+                const h = [];
+                for (const user of data) {
+                    h.push("<tr>");
+                    h.push(`<td>${user.name}</td>`);
+                    h.push(`<td>${user.company}</td>`);
+                    h.push(`<td>${user.email}</td>`);
+                    h.push(`<td>${user.phone}</td>`);
+                    h.push(`<td>${user.address}</td>`);
+                    h.push("</tr>");
+                }
+                document.getElementById(id).innerHTML = h.join("");
+            }
+
+            // 정렬
+            let lastSortKey = "";
+            let bAsc = true;
+
+            function sort(columnKey) {
+                if (columnKey == lastSortKey) bAsc = !bAsc;
+
+                let sortValue = bAsc ? 1 : -1;
+                const sortData = currentData.sort((a, b) => {
+                    return a[columnKey] > b[columnKey]
+                        ? sortValue // 오름차순
+                        : a[columnKey] < b[columnKey]
+                        ? sortValue * -1 // 내림차순
+                        : 0;
+                });
+
+                render("user_tb", sortData);
+                lastSortKey = columnKey;
+            }
+
+            // 필터링
+            function filter() {
+                const txt = document.getElementById("txt").value;
+                if (txt == "") {
+                    // 필터 조건 없으면 전체 데이터 출력
+                    currentData = userList;
+                    render("user_tb", currentData);
+                } else {
+                    const regexp = new RegExp(txt, "i");
+                    currentData = userList.filter(
+                        (user) =>
+                            regexp.test(user.name) ||
+                            regexp.test(user.email) ||
+                            regexp.test(user.phone) ||
+                            regexp.test(user.address)
+                    );
+                    render("user_tb", currentData);
+                }
+            }
+
+            let currentData = userList;
+
+            window.addEventListener("load", () => {
+                document.querySelectorAll("th[data-sort-key]").forEach((th) => {
+                    th.addEventListener("click", () => {
+                        sort(th.getAttribute("data-sort-key"));
+                    });
+                });
+                render("user_tb", currentData);
+            });
+        </script>
+    </body>
+</html>
