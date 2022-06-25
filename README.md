@@ -1,7 +1,9 @@
 # 바닐라 자바스크립트
 
-Chapter 01 - Chapter 05 ▶ 22.06.22 목 ✔️  
-Chapter 06 - Chapter 14 ▶ 22.06.23 금
+Chapter 01 - Chapter 05 ▶ 22.06.22 수 ✔️  
+Chapter 06 - Chapter 07 ▶ 22.06.23 목 ✔️  
+Chapter 08 - Chapter 12 ▶ 22.06.24 금 ✔️  
+Chapter 13 - Chapter 14 ▶ 22.06.25 토
 
 ## Chapter 01 자바스크립트
 
@@ -112,9 +114,9 @@ Chapter 06 - Chapter 14 ▶ 22.06.23 금
 
 ## Chapter 13 SNS 로그인
 
--   [ ] 카카오 계정으로 로그인하기
--   [ ] 네이버 아이디로 로그인하기
--   [ ] 구글 계정으로 로그인하기
+-   [x] 카카오 계정으로 로그인하기
+-   [x] 네이버 아이디로 로그인하기
+-   [x] 구글 계정으로 로그인하기
 
 ## Chapter 14 실습 예제
 

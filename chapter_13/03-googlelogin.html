@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+        <meta name="google-signin-scope" content="profile email" />
+        <meta
+            name="google-signin-client_id"
+            content="281557734142-t21ecekijk3iqh883hq6b1rh3fiptkjn.apps.googleusercontent.com"
+        />
+        <script src="https://apis.google.com/js/platform.js"></script>
+    </head>
+    <body>
+        <div id="google-signin-btn"></div>
+        <button
+            id="google-signout-btn"
+            style="display: none"
+            onclick="onSignOut()"
+        >
+            로그아웃
+        </button>
+        <script>
+            gapi.signin2.render("google-signin-btn", { onsuccess: onSignIn });
+
+            function onSignIn(googleUser) {
+                const profile = googleUser.getBasicProfile();
+                console.log("ID: " + profile.getId());
+                console.log("Full Name: " + profile.getName());
+                console.log("Given Name: " + profile.getGivenName());
+                console.log("Family Name: " + profile.getFamilyName());
+                console.log("Image URL: " + profile.getImageUrl());
+                console.log("Email: " + profile.getEmail());
+
+                const id_token = googleUser.getAuthResponse().id_token;
+                console.log("ID Token: " + id_token);
+
+                document.getElementById("google-signin-btn").style.display =
+                    "none";
+                document.getElementById("google-signout-btn").style.display =
+                    "";
+            }
+
+            function onSignOut() {
+                gapi.auth2.getAuthInstance().disconnect();
+                document.getElementById("google-signin-btn").style.display = "";
+                document.getElementById("google-signout-btn").style.display =
+                    "none";
+            }
+        </script>
+    </body>
+</html>
